@@ -63,39 +63,6 @@ def predictRouteClient():
     except Exception as e:
         return Response("Error Occurred! %s" %e)
 
-
-'''
-@app.route("/train", methods=['GET','POST'])
-@cross_origin()
-def trainRouteClient():
-
-    try:
-        if request.json['folderPath'] is not None:
-            #path = request.json['folderPath']
-            path = 'Training_Batch_Files'
-
-            train_valObj = train_validation(path) #object initialization
-
-            train_valObj.train_validation()#calling the training_validation function
-
-
-            trainModelObj = trainModel() #object initialization
-            trainModelObj.trainingModel() #training the model for the files in the table
-
-
-    except ValueError:
-
-        return Response("Error Occurred! %s" % ValueError)
-
-    except KeyError:
-
-        return Response("Error Occurred! %s" % KeyError)
-
-    except Exception as e:
-
-        return Response("Error Occurred! %s" % e)
-    return Response("Training successfull!!")
-'''
 @app.route("/train", methods=['GET','POST'])
 @cross_origin()
 def trainRouteClient():
